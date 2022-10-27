@@ -1,0 +1,82 @@
+.page-header {
+    background-color: #C25100;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header img {
+    width: 65px;
+    height: 65px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.page-header p {
+    color: #ffffffa2;
+    font-weight: bold;
+}
+
+.page-header ul, li{
+    text-decoration: none;
+    display: inline;
+    float: right;
+}
+
+.page-header ul, li, button, a {
+    color: #ffffffa2;
+
+}
+
+.page-header ul, li, button, a:hover {
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+body {
+    background-color: rgb(106, 186, 243);
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date p {
+    color: #ffffffa2;
+}
+
+.save {
+    float: right;
+}
+
+.resenha-form textarea, .resenha-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.resenha {
+    margin-bottom: 70px;
+}
+
+.resenha h2, h2 a, .resenha h2 a:visited {
+    color: #ffffff;
+}
+
+.resenha p {
+    color: #ffffff;
+}
+

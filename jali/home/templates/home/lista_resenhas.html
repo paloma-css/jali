@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+        {% for resenha in resenhas %}
+            <div class="resenha">
+                <p>publicado em: {{ resenha.data_publicacao }}</p>
+                <h2><a href="{% url 'detalhe_resenha' pk=resenha.pk %}">{{ resenha.titulo }}</a></h2>
+                <p>{{ resenha.texto|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+{% endblock %}

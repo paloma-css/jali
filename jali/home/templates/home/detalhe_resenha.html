@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <div class="resenha">
+        {% if resenha.data_publicacao %}
+            <div class="date">
+                {{ resenha.data_publicacao }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <a class="btn btn-default" href="{% url 'editar_resenha' pk=resenha.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+        <h2>{{ resenha.titulo }}</h2>
+        <p>{{ resenha.texto|linebreaksbr }}</p>
+    </div>
+{% endblock %}

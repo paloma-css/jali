@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="{% static 'images/Book-icon-small.png' %}" type="image/x-icon">
+        <title>JáLi!</title>
+    </head>
+    <body>
+        <div class="page-header">
+            {% if user.is_authenticated %}
+            <a href="{% url 'nova_resenha' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+            <h1><a href="/"><img src="{% static 'images/Book-icon.png' %}" alt="logo_livro_fechado">JáLi!</a></h1>
+            <p>Resenhas de livros para quem ama (e para quem não tem tempo de) ler!</p>
+            <form action="." method="GET">
+            <ul>
+                <li><button class="btn btn-primary"><a href="/admin">Login</a></button></li>
+                <li><input type="submit" class="btn btn-primary" value="Ok!"></li>
+                <li><input type="text" name="busca" id="busca" class="form-control" placeholder="Pesquisar..."></li>
+            </ul>
+            </form>
+
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

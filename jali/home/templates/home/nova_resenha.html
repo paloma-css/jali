@@ -1,0 +1,9 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <h2>Nova resenha</h2>
+    <form method="POST" class="resenha-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Postar!</button>
+    </form>
+{% endblock %}
