@@ -10,20 +10,40 @@
     </head>
     <body>
         <div class="page-header">
-            {% if user.is_authenticated %}
-            <a href="{% url 'nova_resenha' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <h1><a href="/"><img src="{% static 'images/Book-icon.png' %}" alt="logo_livro_fechado">JáLi!</a></h1>
-            <p>Resenhas de livros para quem ama (e para quem não tem tempo de) ler!</p>
-            <form action="." method="GET">
-            <ul>
-                <li><button class="btn btn-primary"><a href="/admin">Login</a></button></li>
-                <li><input type="submit" class="btn btn-primary" value="Ok!"></li>
-                <li><input type="text" name="busca" id="busca" class="form-control" placeholder="Pesquisar..."></li>
-            </ul>
-            </form>
+            
+            <h1><a href="/"><img src="{% static 'images/Book-icon.png' %}" alt="imagem_livro_fechado">JáLi!</a></h1>
+            <p>Resenhas e resumos de livros para quem não tem tempo de ler!</p>
+            
 
         </div>
+
+        <aside class="aside">
+            <form action="." method="GET">
+                {% if user.is_authenticated %}
+                    <div class="login"><button class="btn btn-primary"><a href="/accounts/logout/">Logout</a></button></div>
+                    <a href="{% url 'nova_resenha' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                {% else %}
+                    <div class="login"><button class="btn btn-primary"><a href="/accounts/login">Login</a></button></div>
+                {% endif %}
+                <div class="busca">
+                    <input type="text" name="busca" id="busca" class="form-control" placeholder="Pesquisar...">
+                    <input type="submit" class="btn btn-primary" value="Pesquise!">
+                </div>
+            </form>
+
+            <div class="informacoes">
+                <h3>Quem somos?</h3>
+                <p>Quatro estudantes usuários de óculos do curso de Análise e Desenvolvimento de Sistemas da Uniasselvi, amantes de tecnologia e inovação, séries, música, filmes e cheios de bom humor.</p>
+                <br>
+                <p class="nomes">Clique em nossos nomes e nos encontre!</p>
+                <br>
+                <a href="https://www.instagram.com/anacarolinalp_20"><p class="nomes">Ana</p></a>
+                <a href="https://www.instagram.com/laurodx"><p class="nomes">Lauro</p></a>
+                <a href="https://www.instagram.com/marilia.pereiracamargo"><p class="nomes">Mary</p></a>
+                <a href="https://www.linkedin.com/in/paloma-c-s-soares-90a9211a5"><p class="nomes">Paloma</p></a>
+            </div>
+        </aside>
+
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">

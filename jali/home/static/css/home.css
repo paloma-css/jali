@@ -2,6 +2,7 @@
     background-color: #C25100;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+    
 }
 
 .page-header img {
@@ -41,6 +42,51 @@ body {
     background-color: rgb(106, 186, 243);
 }
 
+.aside{
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #C25100;
+    text-align: center;
+}
+
+.aside button{
+    float: right;
+    font-size: 15pt;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.aside a, input{
+    align-items: center;
+}
+
+.aside h3{
+    margin-top: 80px;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.aside p{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    color: #ffffffa2;
+    font-weight: bold;
+}
+
+.aside p.nomes{
+    margin-top: 10px;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
 .content {
     margin-left: 40px;
 }
@@ -66,7 +112,9 @@ h1, h2, h3, h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+    margin-top: 20px;
 }
+
 
 .resenha {
     margin-bottom: 70px;
